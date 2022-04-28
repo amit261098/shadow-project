@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@200&family=Red+Hat+Display:wght@300&display=swap');
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 320px;
+    background-color: white;
+    
+    &__logo {
+        // background-image: url("dextruslogo.jpeg")  ;
+        display: grid;
+        place-items: center;
+        height: 120px;
+        font-size: 1.05rem;
+        font-weight: 100;
+        font-family: "Raleway" , sans-serif;
+        color: black;
+        margin-left: -140px;
+        margin-bottom: 20px;
+
+    }
+
+    &__menu {
+        position: relative;
+
+        &__item {
+            display: flex;
+            align-items: center;
+            place-content: flex-start;
+            padding: 0.98rem 3rem;
+            font-size: 0.94rem;
+            // font-family: "Raleway",sans-serif;
+            font-size: 15px;
+            font-weight: 250;
+            color: black;
+            transition: color 0.3s ease-in-out;
+            border-bottom: 1px solid #ddd !important;
+            // width: fit-content;
+            margin-left: 15px;
+            
+
+            &.active {
+                // color: #fff;
+            }
+
+            &__icon {
+                margin-right: 1rem;
+
+                i {
+                    font-size: 1.75rem;
+                    
+                }
+            }
+        }
+
+        &__indicator {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: calc(100% - 75px);
+            border: 0.5px 0px 0.5px 0px solid #E0E0E0;
+        
+            border-radius: 10px;
+            // background-image: linear-gradient(to right,#308efe ,white);
+            z-index: -1;
+            transform: translateX(-50%);
+            transition: 0.3s ease-in-out;
+        }
+    }
+}
